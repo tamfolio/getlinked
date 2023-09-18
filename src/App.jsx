@@ -1,5 +1,6 @@
 import "./App.css";
 import Explain from "./components/Explain";
+import Explain2 from "./components/Explain2";
 import Hero from "./components/Hero";
 
 function App() {
@@ -16,10 +17,9 @@ function App() {
             chance to transform your ideas into reality. Solving real-world
             problems, pushing the boundaries of technology, and creating
             solutions that can change the world, that's what we're all about!"
-        flexDirection="row"
       />
       <div className="w-[100%] h-[1px] bg-white opacity-[.18]"></div>
-      <Explain
+      <Explain2
         img="./assets/idea2.png"
         title="Rules and"
         spanned="Guidelines"
@@ -32,7 +32,6 @@ function App() {
         problems, pushing the boundaries of 
         technology, and creating solutions that can 
         change the world, that's what we're all about!"
-        flexDirection="row-reverse"
       />
       <div className="w-[100%] h-[1px] bg-white opacity-[.18]"></div>
     </div>
