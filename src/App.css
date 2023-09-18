@@ -1,0 +1,7 @@
+.gradient{
+  background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+}
+
+.row-reverse{
+  flex-direction: row-reverse;
+}

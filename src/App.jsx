@@ -1,11 +1,42 @@
-import './App.css'
+import "./App.css";
+import Explain from "./components/Explain";
+import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div>
-      <h1>Get Linked</h1>
+    <div className="w-[100%] h-auto bg-blue">
+      <Hero />
+      <Explain
+        img="./assets/idea.png"
+        title="Introduction to getlinked"
+        spanned="tech Hackathon 1.0"
+        para="Our tech hackathon is a melting pot of visionaries, and its purpose
+            is as clear as day: to shape the future. Whether you're a coding
+            genius, a design maverick, or a concept wizard, you'll have the
+            chance to transform your ideas into reality. Solving real-world
+            problems, pushing the boundaries of technology, and creating
+            solutions that can change the world, that's what we're all about!"
+        flexDirection="row"
+      />
+      <div className="w-[100%] h-[1px] bg-white opacity-[.18]"></div>
+      <Explain
+        img="./assets/idea2.png"
+        title="Rules and"
+        spanned="Guidelines"
+        para="Our tech hackathon is a melting pot of 
+        visionaries, and its purpose is as clear as day:
+        to shape the future. Whether you're a coding
+        genius, a design maverick, or a concept 
+        wizard, you'll have the chance to transform 
+        your ideas into reality. Solving real-world 
+        problems, pushing the boundaries of 
+        technology, and creating solutions that can 
+        change the world, that's what we're all about!"
+        flexDirection="row-reverse"
+      />
+      <div className="w-[100%] h-[1px] bg-white opacity-[.18]"></div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
