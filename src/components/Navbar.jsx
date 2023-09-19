@@ -1,27 +1,43 @@
 import Button from "./Button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [activeLink, setActiveLink] = useState("");
   const [openMenu, setOpenMenu] = useState(false);
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
 
-  console.log(openMenu);
+  const handleLinkClick = () => {
+    setActiveLink("Contact");
+  };
+
+  console.log("activeLink", activeLink);
   return (
     <div className="w-[100%] lg:h-[20vh] h-[10vh] flex items-center justify-between px-[48px] md:px-[128px] relative">
-      <h1 className="text-[#fff]  text-md lg:text-4xl font-bold font-clash">
+      <Link to='/' className="text-[#fff]  text-md lg:text-4xl font-bold font-clash">
         get<span className="text-[#D434FE]">linked</span>
-      </h1>
+      </Link>
       <div className="gap-[56px] hidden lg:flex">
         <p className="font-monts text-base text-[#fff]">Timeline</p>
         <p className="font-monts text-base text-[#fff]">Overview</p>
         <p className="font-monts text-base text-[#fff]">FAQs</p>
-        <p className="font-monts text-base text-[#fff]">Contact</p>
+        <Link
+          to="/contact"
+          onClick={handleLinkClick}
+          className={
+            activeLink === "Contact"
+              ? "active-link"
+              : "font-monts text-base text-[#fff]"
+          }
+        >
+          Contact
+        </Link>
       </div>
-      <div className="hidden lg:block">
+      <Link to="/register" className="hidden lg:block">
         <Button text="Register" />
-      </div>
+      </Link>
       <img
         src="./assets/menu.png"
         alt=""
@@ -46,13 +62,16 @@ function Navbar() {
             <p className="font-monts text-base text-[#fff] font-semibold">
               FAQs
             </p>
-            <p className="font-monts text-base text-[#fff] font-semibold">
+            <Link
+              to="/contact"
+              className="font-monts text-base text-[#fff] font-semibold"
+            >
               Contact
-            </p>
+            </Link>
           </div>
-          <div className="mt-[50px]">
+          <Link to="/register" className="mt-[50px]">
             <Button text="Register" />
-          </div>
+          </Link>
         </div>
       )}
     </div>

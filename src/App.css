@@ -1,7 +1,31 @@
-.gradient{
-  background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+.gradient {
+  background: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+  border-radius: 4px;
 }
 
-.row-reverse{
+.row-reverse {
   flex-direction: row-reverse;
+}
+
+.active {
+  color: linear-gradient(270deg, #903aff 0%, #fe34b9 100%);
+}
+
+.active-link {
+  background: linear-gradient(90deg, #903aff 3.08%, #ff26b9 93.85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.input-entry {
+  border-radius: 4px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
