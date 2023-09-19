@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 
 function HeroSection() {
@@ -10,7 +11,9 @@ function HeroSection() {
           Participate in getlinked tech Hackathon 2023 stand a chance to win a
           Big prize
         </p>
+        <Link to='/register'>
         <Button text="Register"/>
+        </Link>
         <div className="flex items-end justify-end h-[60px] gap-[20px] lg:mt-[47px] xl:mt-[77px]">
             <div className="flex items-baseline gap-[5px] h-[50px]">
                 <p className="text-white font-unica text-[40px] md:text-[64px] h-[50px]">00</p>
